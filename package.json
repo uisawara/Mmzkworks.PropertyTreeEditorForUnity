@@ -1,0 +1,28 @@
+{
+  "name": "mmzkworks-propertytree-editor-unity",
+  "version": "1.0.0",
+  "description": "Unity Package for PropertyTree Editor with automated build scripts",
+  "scripts": {
+    "build": "npm run build:propertytree && npm run copy:dll",
+    "build:propertytree": "dotnet build .\\submodules\\Mmzkworks.PropertyTree\\Mmzkworks.PropertyTree.sln --configuration Release",
+    "copy:dll": "powershell -Command \"Copy-Item '.\\submodules\\Mmzkworks.PropertyTree\\PropertyTree\\bin\\Release\\net8.0\\PropertyTree.dll' '.\\Assets\\UnityPackages\\Mmzkworks.PropertyTreeEditorForUnity\\Plugins\\' -Force\"",
+    "clean": "dotnet clean .\\submodules\\Mmzkworks.PropertyTree\\Mmzkworks.PropertyTree.sln --configuration Release",
+    "rebuild": "npm run clean && npm run build"
+  },
+  "keywords": [
+    "unity",
+    "property-tree",
+    "editor",
+    "dotnet"
+  ],
+  "author": "Mmzkworks",
+  "license": "MIT",
+  "devDependencies": {},
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "os": [
+    "win32"
+  ]
+} 

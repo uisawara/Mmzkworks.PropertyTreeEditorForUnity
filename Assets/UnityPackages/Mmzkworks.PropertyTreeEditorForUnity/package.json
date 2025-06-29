@@ -1,0 +1,16 @@
+{
+  "name": "works.mmzk.propertytree.unity",
+  "displayName": "Mmzkworks PropertyTreeEditorForUnity",
+  "author": {
+    "name": "uisawara",
+    "url": "https://mmzk.works/"
+  },
+  "version": "0.0.1",
+  "unity": "2022.3",
+  "description": "mmzkworks structured property tree editor for Unity UIElements",
+  "keywords": [
+    "inspector"
+  ],
+  "license": "MIT",
+  "dependencies": {}
+}

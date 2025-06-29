@@ -1,0 +1,3 @@
+[submodule "submodules/Mmzkworks.PropertyTree"]
+	path = submodules/Mmzkworks.PropertyTree
+	url = git@github.com:uisawara/Mmzkworks.PropertyTree.git
