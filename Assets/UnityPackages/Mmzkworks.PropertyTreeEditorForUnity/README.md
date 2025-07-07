@@ -3,6 +3,14 @@ Unity Project, AppUI の Runtime用 PropertyInspector です。
 
 <img src="C:\Users\yu-og\AppData\Roaming\Typora\typora-user-images\image-20250621131933703.png" alt="image-20250621131933703" style="zoom:50%;" />
 
+## Installation
+
+upm
+
+```
+git@github.com:uisawara/Mmzkworks.PropertyTreeEditorForUnity.git?path=Assets/UnityPackages/Mmzkworks.PropertyTreeEditorForUnity
+```
+
 ## Samples
 
 PropertySystemではgetter,setterを経由することで既存コードの変数と結合することができます。
