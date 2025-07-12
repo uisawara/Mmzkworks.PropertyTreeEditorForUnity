@@ -39,12 +39,26 @@ public class Sample : MonoBehaviour
 
     void Start()
     {
+        // 状態管理用のbool変数を追加
+        var isEnabled = true;
+        var isDebugMode = false;
+        
         var serializablePropertyGroup = SerializablePropertyBuilder.BuildFromObject(sampleA);
         var rootGroup = new PropertyGroup("root", new IProperty[]
         {
             new FloatPropertyAdapter("Speed", 0f, 10f, () => speed, v => speed = v),
             new FloatPropertyAdapter("Volume", 0f, 1f, () => volume, v => volume = v),
             new ActionProperty("Run", action: () => Debug.Log("Run")),
+            
+            // BoolPropertyのテスト用
+            new PropertyGroup("BoolProperties", new IProperty[]
+            {
+                new BoolProperty("Jump"),
+                new BoolProperty("Rest", true), // 初期値をtrueに設定
+                new BoolPropertyAdapter("Enabled", () => isEnabled, v => isEnabled = v),
+                new BoolPropertyAdapter("Debug Mode", () => isDebugMode, v => isDebugMode = v)
+            }),
+            
             new PropertyGroup("GroupA", new IProperty[]
             {
                 new FloatPropertyAdapter("Speed", 0f, 10f, () => speed, v => speed = v),
