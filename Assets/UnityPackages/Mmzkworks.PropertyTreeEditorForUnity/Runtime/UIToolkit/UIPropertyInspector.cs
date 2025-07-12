@@ -181,6 +181,28 @@ namespace works.mmzk.PropertySystem
                         container.Add(slider);
                         break;
 
+                    case BoolPropertyAdapter p:
+                        var toggle = new Toggle()
+                        {
+                            value = p.Get()
+                        };
+
+                        toggle.RegisterValueChangedCallback(evt => p.Set(evt.newValue));
+
+                        container.Add(toggle);
+                        break;
+
+                    case BoolProperty p:
+                        var boolToggle = new Toggle()
+                        {
+                            value = p.Get()
+                        };
+
+                        boolToggle.RegisterValueChangedCallback(evt => p.Set(evt.newValue));
+
+                        container.Add(boolToggle);
+                        break;
+
                     case ActionProperty p:
                         var button = new Button(() => p.Execute())
                         {
