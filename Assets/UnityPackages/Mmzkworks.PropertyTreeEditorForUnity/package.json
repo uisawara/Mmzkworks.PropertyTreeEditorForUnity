@@ -5,7 +5,7 @@
     "name": "uisawara",
     "url": "https://mmzk.works/"
   },
-  "version": "0.0.2",
+  "version": "0.0.3",
   "unity": "2022.3",
   "description": "mmzkworks structured property tree editor for Unity UIElements",
   "keywords": [
