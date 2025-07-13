@@ -70,12 +70,12 @@ public class Sample : MonoBehaviour
                 new ActionProperty("Run", action: () =>
                 {
                     var property = _propertyGroup.At<BoolProperty>(0);
-                    property.Set(!property.Get());
+                    property.Value = !property.Value;
                 }),
                 new ActionProperty("Run", action: () =>
                 {
                     var property = _propertyGroup.At<BoolProperty>(1);
-                    property.Set(!property.Get());
+                    property.Value = !property.Value;
                 })
             }),
             new PropertyGroup("Enums", new IProperty[]

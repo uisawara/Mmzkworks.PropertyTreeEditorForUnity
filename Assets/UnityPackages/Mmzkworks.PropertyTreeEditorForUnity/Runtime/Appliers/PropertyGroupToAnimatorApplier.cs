@@ -26,13 +26,13 @@ namespace works.mmzk.PropertySystem
                 switch (item)
                 {
                     case BaseValueProperty<int> value:
-                        _animator.SetInteger(value.Name, value.Get());
+                        _animator.SetInteger(value.Name, value.Value);
                         break;
                     case BaseValueProperty<float> value:
-                        _animator.SetFloat(value.Name, value.Get());
+                        _animator.SetFloat(value.Name, value.Value);
                         break;
                     case BaseValueProperty<bool> value:
-                        _animator.SetBool(value.Name, value.Get());
+                        _animator.SetBool(value.Name, value.Value);
                         break;
                 }
             }
