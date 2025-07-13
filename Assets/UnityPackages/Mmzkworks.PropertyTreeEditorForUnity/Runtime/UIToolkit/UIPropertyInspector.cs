@@ -173,10 +173,10 @@ namespace works.mmzk.PropertySystem
                     case FloatPropertyAdapter p:
                         var slider = new Slider(p.Min, p.Max)
                         {
-                            value = p.Get()
+                            value = p.Value
                         };
 
-                        slider.RegisterValueChangedCallback(evt => p.Set(evt.newValue));
+                        slider.RegisterValueChangedCallback(evt => p.Value = evt.newValue);
 
                         container.Add(slider);
                         break;
@@ -184,10 +184,10 @@ namespace works.mmzk.PropertySystem
                     case BoolPropertyAdapter p:
                         var toggle = new Toggle()
                         {
-                            value = p.Get()
+                            value = p.Value
                         };
 
-                        toggle.RegisterValueChangedCallback(evt => p.Set(evt.newValue));
+                        toggle.RegisterValueChangedCallback(evt => p.Value = evt.newValue);
 
                         container.Add(toggle);
                         break;
@@ -195,10 +195,10 @@ namespace works.mmzk.PropertySystem
                     case BoolProperty p:
                         var boolToggle = new Toggle()
                         {
-                            value = p.Get()
+                            value = p.Value
                         };
 
-                        boolToggle.RegisterValueChangedCallback(evt => p.Set(evt.newValue));
+                        boolToggle.RegisterValueChangedCallback(evt => p.Value = evt.newValue);
 
                         container.Add(boolToggle);
                         break;
